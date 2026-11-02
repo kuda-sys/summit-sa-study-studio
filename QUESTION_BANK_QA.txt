@@ -1,0 +1,103 @@
+SUMMIT ACADEMY — SA TEST STUDIO v1.0
+QUESTION BANK & AUDIO QA REPORT
+================================
+
+Automated question-bank audit
+-----------------------------
+Generated question pool: 5,080
+- Grammar Mastery: 1,000
+- Comparatives & Superlatives: 1,000
+- Smart Everyday English: 1,000
+- Sentence Builder & Context: 1,000
+- Textbook Lessons 4–6: 1,000
+- Reading comprehension: 80
+
+Checks run against every generated question
+-------------------------------------------
+PASS — Every item has a non-empty instruction and question.
+PASS — Every item has an answer present in its answer choices.
+PASS — Every item has at least three distinct answer choices.
+PASS — No duplicate instruction/question prompts remain in the generated pool.
+PASS — No occurrences of the previously reported awkward templates:
+       “Which example belongs…”
+       “Which option keeps the pair…”
+       “Which statement matches the vocabulary resource…”
+PASS — No remaining “clean-water tap” grammar context.
+PASS — No remaining “The visiting group” agreement trap.
+PASS — No target answer of “There was a library” / “There were a library”.
+PASS — JavaScript syntax check passed.
+PASS — Question bank builds successfully in the automated harness.
+
+Corrections made
+----------------
+- Replaced unnatural synonym-pair questions with direct, simple prompts about
+  more formal alternatives, everyday words, and how vocabulary is used in a
+  sentence.
+- Rephrased textbook vocabulary prompts such as “Which example belongs to the
+  word cookie?” into natural sentence/context questions.
+- Simplified sentence proofreading prompts. The sentence to review is clearly
+  introduced, followed by a direct question such as “Which sentence is correct?”
+- Replaced the “clean-water tap beside the community centre” context with a
+  more natural school setting.
+- Changed “The visiting group” to “The visiting students” in plural-subject
+  practice, avoiding the collective-noun ambiguity that caused the was/were
+  answer-key complaint.
+- Removed repeated past-time clues from map-based short-answer questions.
+- Confirmed the answer key is one of the available choices for all 5,080 items.
+
+Sound behavior implemented
+--------------------------
+- Each new quiz, reading-comprehension set, or listening-question set randomly
+  selects one of the six supplied relaxing tracks and loops it at reduced volume.
+- The relaxing track stops when the set is completed or the student exits that
+  activity. A new set chooses a different track from the immediately previous
+  one when possible.
+- The supplied click sound plays on interactive controls such as buttons, tabs,
+  links, and selectors.
+  the next question. It can overlap the relaxing track.
+- When a set's score is shown, the Correct answer sound plays only for a score
+  strictly above 70%; otherwise the Wrong answer sound plays.
+
+Important limitation
+-------------------
+These are automated structural and targeted common-sense checks across the
+whole generated pool, plus targeted fixes for the examples reported. They do
+not mean a teacher has manually proofread every randomized question one by one.
+Please continue to report any question whose wording or factual context seems
+unnatural so it can be corrected at source.
+
+
+Version 1.2 feature checks
+--------------------------
+PASS — All inline JavaScript passed Node.js syntax checking.
+PASS — Smart Everyday English custom quiz harness generated exactly 10 questions.
+PASS — Each sampled Smart Everyday English question had four distinct options,
+       and the answer key was present among those options.
+PASS — Smart Everyday English mixes direct synonym/formal-alternative questions
+       with sentence-replacement questions; a fresh 10-question set is shuffled.
+PASS — The supplied Mixkit WAV is installed as the click sound asset, and the
+       click handler includes learning-path cards and their image areas.
+PASS — Speaking Gym includes start recording, end recording, and playback controls.
+PASS — Speaking and writing model answers have been expanded to 5–6 sentences.
+PASS — Model-answer speech playback prefers a female-sounding en-GB voice when
+       the browser exposes one.
+
+Limits
+------
+These checks cover syntax and focused logic, not every browser interaction.
+Microphone access and the available speech-synthesis voice depend on the
+student's browser, operating system, permissions, and security context. No claim
+is made that a specific voice exists on every device or that every interaction
+has been tested end-to-end in a live browser.
+
+
+V1.3 UI / asset checks
+- Inline JavaScript syntax check: passed.
+- Summit Academy logo asset present and referenced in the persistent header.
+- Welcome video source points to assets/welcome-hero.mp4 (the user's supplied video, optimized for local use).
+- Legacy welcome video reference removed.
+- ZIP integrity is checked at packaging time.
+- Full interactive browser visual testing was not completed because a Chromium browser executable was unavailable in this environment.
+
+
+UI update v1.4: Added a shared cinematic visual system across secondary pages, route-coordinated accent colours, animated photo panels, looping video layers on selected learning routes, and a dashboard/quiz banner where a page-specific hero is not already present. Existing reduced-motion support is retained.
